@@ -61,7 +61,7 @@ else{
       </h1>
 
       {/* Login Card */}
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 transition transform hover:scale-[1.02]">
+      <div className="bg-amber-100 rounded-2xl shadow-2xl w-full max-w-md p-8 transition transform hover:scale-[1.02]">
         <h2 className="text-2xl font-semibold text-gray-800 text-center mb-2">
           Welcome Back 👋
         </h2>
