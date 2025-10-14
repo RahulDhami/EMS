@@ -1,5 +1,5 @@
 import React, { createContext,useContext,useEffect,useState } from 'react'
-
+import axios from "axios"
 const userContext=createContext()
 const authContext = ({children}) => {
     const [user,setUser]=useState(null)
@@ -15,13 +15,16 @@ headers: {
   "Authorization" : `Bearer ${token}`
 }
     })
-    }
+    
     
     if(response.data.success){
       setUser(response.data.user)
     }
+  }
     else{
       setUser(null)
+      setLoading(false);
+      return
     }
   } catch (error) {
     if(error.response&& !error.response.data.success){
@@ -37,8 +40,9 @@ verifyUser()
     const login =(user)=>{
 setUser(user)
     }
-    const logout=(user)=>{
+    const logout=()=>{
 setUser(null)
+    
 localStorage.removeItem("token")
     }
   return (
