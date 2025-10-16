@@ -27,7 +27,7 @@ const AdminSidebar = () => {
            className='flex items-center space-x-4 py-2.5 px-4 rounded'>
 <FaBuilding/>
 <span>
-    Employee
+    Leave
 </span>
         </NavLink>
 
